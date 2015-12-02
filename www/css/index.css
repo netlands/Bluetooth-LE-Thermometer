@@ -17,7 +17,7 @@ h1 {
 
 button {
     margin: 15px;
-    -webkit-appearance:none;    
+    -webkit-appearance:none;
     font-size: 1.2em;
 }
 
@@ -41,16 +41,16 @@ button {
 
 ul {
     list-style: none;
-    border-bottom: 1px solid #d3d3d3;    
+    border-bottom: 1px solid #d3d3d3;
     text-align: left;
 }
 
 li {
     margin-left: -40px;
-    padding: 5px;        
+    padding: 5px;
     padding-top: 10px;
     min-height: 50px;
-    border-top: 1px solid #d3d3d3;    
+    border-top: 1px solid #d3d3d3;
     font-size: 0.9em;
 }
 
@@ -58,4 +58,9 @@ button {
     -webkit-appearance: none;
     font-size: 1.5em;
     border-radius: 0;
+}
+
+.temp {
+    font-size: 60px; font-size: 26vw;
+    font-weight: bold;
 }

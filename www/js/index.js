@@ -152,8 +152,8 @@ var app = {
         var celsius = arrayBufferToFloat(data),
             fahrenheit = celsius * 1.8 + 32;
 
-        tempCelsius.innerHTML = celsius.toFixed(2);
-        tempFahrenheit.innerHTML = fahrenheit.toFixed(2);
+        tempCelsius.innerHTML = celsius.toFixed(1);
+        tempFahrenheit.innerHTML = fahrenheit.toFixed(1);
 
         /* var buttonValue = arrayBufferToInt(data);
         if (buttonValue === 1) {

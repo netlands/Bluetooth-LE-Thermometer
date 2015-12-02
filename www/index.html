@@ -10,20 +10,20 @@
     </head>
     <body>
         <div class="app">
-            <h1>RFduino Temp</h1>
-            <div id="mainPage">
-                <ul id="deviceList">                    
+            <!--h1>RFduino Temp</h1-->
+            <!--div id="mainPage">
+                <ul id="deviceList">
                 </ul>
                 <button id="refreshButton">Refresh</button>
-            </div>
+            </div-->
             <div id="detailPage">
-                <span id="tempCelsius"></span>&nbsp;&deg;C<br/>
-                <span id="tempFahrenheit"></span>&nbsp;&deg;F<br/>
+                <span class="temp"><span id="tempCelsius">00</span>&nbsp;&deg;C</span><br/>
+                <span id="tempFahrenheit">00</span>&nbsp;&deg;F<br/>
 
-                <div id="buttonState">Button Released</div>
-                <div id="ledButton">Hold for LED</div>
+                <!-- div id="buttonState">Button Released</div>
+                <div id="ledButton">Hold for LED</div-->
                 <button id="disconnectButton">Disconnect</button>
-            </div>            
+            </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
