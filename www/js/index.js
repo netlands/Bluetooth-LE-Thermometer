@@ -141,7 +141,7 @@ var app = {
                 // subscribe for incoming data
                 ble.startNotification(deviceId, rfduino.serviceUUID, rfduino.receiveCharacteristic, app.onData, app.onError);
                 disconnectButton.dataset.deviceId = deviceId;
-                ledButton.dataset.deviceId = deviceId;
+                // ledButton.dataset.deviceId = deviceId;
                 app.showDetailPage();
             };
 
