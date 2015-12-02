@@ -112,8 +112,8 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         refreshButton.addEventListener('touchstart', this.refreshDeviceList, false);
-        ledButton.addEventListener('touchstart', this.sendData, false);
-        ledButton.addEventListener('touchend', this.sendData, false);
+        // ledButton.addEventListener('touchstart', this.sendData, false);
+        // ledButton.addEventListener('touchend', this.sendData, false);
         disconnectButton.addEventListener('touchstart', this.disconnect, false);
         deviceList.addEventListener('touchstart', this.connect, false); // assume not scrolling
     },
