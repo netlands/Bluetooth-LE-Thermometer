@@ -6,3 +6,5 @@
 *.apk
 # Windows
 *.xap
+# local
+$preview.html
