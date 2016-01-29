@@ -126,7 +126,9 @@ var app = {
     },
     onDiscoverDevice: function(device) {
         
-		if (device.name == 'ondokei' && device.advertising == 'temp') {
+		var deviceName = device.name;
+		var deviceAdvert = getRFduinoService(device.advertising);
+		if (deviceName == 'ondokei' && deviceAdvert == 'temp') {
 			var deviceId = device.id,
 			onConnect = function() {
 				// subscribe for incoming data
