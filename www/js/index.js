@@ -119,17 +119,17 @@ var app = {
     },
     onDeviceReady: function() {
         app.refreshDeviceList();
-        // if we have only one device connect directly
-        if (deviceList.children.length == 1) { 
-            alert("yay!");
-            //deviceList.firstChild.connect; 
-        }
     },
     refreshDeviceList: function() {
         deviceList.innerHTML = ''; // empties the list
         ble.scan([rfduino.serviceUUID], 5, app.onDiscoverDevice, app.onError);
     },
     onDiscoverDevice: function(device) {
+        
+        ble.startNotification(device.id, rfduino.serviceUUID, rfduino.receiveCharacteristic, app.onData, app.onError);
+        app.showDetailPage();
+        ble.connect(device.id, onConnect, app.onError);
+        
         var listItem = document.createElement('li'),
             html = '<b>' + device.name + '</b><br/>' +
                 'RSSI: ' + device.rssi + '&nbsp;|&nbsp;' +
