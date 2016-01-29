@@ -120,7 +120,10 @@ var app = {
     onDeviceReady: function() {
         app.refreshDeviceList();
         // if we have only one device connect directly
-        if (deviceList.children.length == 1) { deviceList.firstChild.connect; }
+        if (deviceList.children.length == 1) { 
+            alert("yay!");
+            //deviceList.firstChild.connect; 
+        }
     },
     refreshDeviceList: function() {
         deviceList.innerHTML = ''; // empties the list
