@@ -126,16 +126,18 @@ var app = {
     },
     onDiscoverDevice: function(device) {
         
-                        var deviceId = device.id,
-                            onConnect = function() {
-                                // subscribe for incoming data
-                                ble.startNotification(deviceId, rfduino.serviceUUID, rfduino.receiveCharacteristic, app.onData, app.onError);
-                                disconnectButton.dataset.deviceId = deviceId;
-                                // ledButton.dataset.deviceId = deviceId;
-                                app.showDetailPage();
-                            };
-                        ble.connect(deviceId, onConnect, app.onError);
-        
+		if (device.name == 'ondokei' && device.advertising == 'temp') {
+			var deviceId = device.id,
+			onConnect = function() {
+				// subscribe for incoming data
+				ble.startNotification(deviceId, rfduino.serviceUUID, rfduino.receiveCharacteristic, app.onData, app.onError);
+				disconnectButton.dataset.deviceId = deviceId;
+				// ledButton.dataset.deviceId = deviceId;
+				app.showDetailPage();
+			};
+			ble.connect(deviceId, onConnect, app.onError);
+		}
+						
         var listItem = document.createElement('li'),
             html = '<b>' + device.name + '</b><br/>' +
                 'RSSI: ' + device.rssi + '&nbsp;|&nbsp;' +
