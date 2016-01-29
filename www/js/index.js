@@ -126,9 +126,15 @@ var app = {
     },
     onDiscoverDevice: function(device) {
         
-        ble.startNotification(device.id, rfduino.serviceUUID, rfduino.receiveCharacteristic, app.onData, app.onError);
-        app.showDetailPage();
-        ble.connect(device.id, onConnect, app.onError);
+                        var deviceId = device.id,
+                            onConnect = function() {
+                                // subscribe for incoming data
+                                ble.startNotification(deviceId, rfduino.serviceUUID, rfduino.receiveCharacteristic, app.onData, app.onError);
+                                disconnectButton.dataset.deviceId = deviceId;
+                                // ledButton.dataset.deviceId = deviceId;
+                                app.showDetailPage();
+                            };
+                        ble.connect(deviceId, onConnect, app.onError);
         
         var listItem = document.createElement('li'),
             html = '<b>' + device.name + '</b><br/>' +
