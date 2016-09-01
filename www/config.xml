@@ -42,7 +42,7 @@
     <preference name="AndroidLaunchMode" value="singleTask" />
     <!-- preference name="AndroidLaunchMode" value="singleInstance" / -->
 
-	<preference name="KeepRunning" value="true" / > 
+	<preference name="KeepRunning" value="true" /> 
 	
     <preference name="StatusBarBackgroundColor" value="#0097A7" />
     <!-- remove menu button -->
